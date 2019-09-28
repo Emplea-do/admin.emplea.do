@@ -1,0 +1,86 @@
+{
+  "name": "emplea.do",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@emotion/core": "^10.0.17",
+    "@emotion/styled": "^10.0.17",
+    "emotion-theming": "^10.0.19",
+    "eslint-config-prettier": "^6.3.0",
+    "eslint-plugin-prettier": "^3.1.1",
+    "eslint-plugin-react-hooks": "^2.0.1",
+    "husky": "^3.0.5",
+    "lint-staged": "^9.2.5",
+    "prettier": "^1.18.2",
+    "ramda": "^0.26.1",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0",
+    "react-router-dom": "^5.0.1",
+    "react-scripts": "3.1.2"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "test:ci": "CI=true react-scripts test --runInBand --bail --findRelatedTests",
+    "test:coverage": "react-scripts test --coverage",
+    "eject": "react-scripts eject",
+    "lint": "eslint src",
+    "prettier": "prettier \"**/*.+(js|jsx|json|yml|yaml|css|less|scss|md|graphql|mdx)\"",
+    "format": "npm run prettier -- --write",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx,ts,tsx}",
+      "!src/**/*.stories.{js,jsx,ts,tsx}",
+      "!src/**/index.{js,jsx,ts,tsx}",
+      "!**/serviceWorker.js",
+      "!**/setupTests.js"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 70,
+        "functions": 80,
+        "lines": 80,
+        "statements": 80
+      }
+    }
+  },
+  "devDependencies": {
+    "@babel/core": "^7.6.0",
+    "@storybook/addon-actions": "^5.2.1",
+    "@storybook/addon-links": "^5.2.1",
+    "@storybook/addon-storyshots": "^5.2.1",
+    "@storybook/addons": "^5.2.1",
+    "@storybook/react": "^5.2.1",
+    "@testing-library/jest-dom": "^4.1.0",
+    "@testing-library/react": "^9.1.4",
+    "@types/jest": "^24.0.18",
+    "@types/ramda": "^0.26.22",
+    "@types/react-router-dom": "^4.3.5",
+    "@types/storybook__addon-storyshots": "^5.1.1",
+    "@types/storybook__react": "^4.0.2",
+    "babel-loader": "^8.0.6",
+    "emotion": "^10.0.17",
+    "jest-emotion": "^10.0.17",
+    "react-test-renderer": "^16.9.0",
+    "require-context.macro": "^1.2.1"
+  }
+}
