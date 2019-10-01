@@ -1,10 +1,16 @@
-import React, { useState } from 'react'
-import { BrowserRouter } from 'react-router-dom'
+import React from 'react'
 
-import { Container, Label } from 'reactstrap'
+import { Container } from 'reactstrap'
+
+import Header from './Header'
 
 function Layout({ children }) {
-  return <Container>{children}</Container>
+  return (
+    <Container>
+      <Header />
+      {children}
+    </Container>
+  )
 }
 
 export default Layout
