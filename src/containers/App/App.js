@@ -1,16 +1,35 @@
 import React, { useState } from 'react'
+import { BrowserRouter, Route } from 'react-router-dom'
 
-import Button from '../../component/forms/Button'
+import Layout from '../../component/layout/Layout'
+
+import Login from '../../pages/Login'
+import Home from '../../pages/Home'
+import AdminBoard from '../../pages/AdminBoard'
+
+import PrivateRoute from '../../router/PrivateRoute'
+
+import { AuthContext } from '../../context/AuthenticationContext'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [token, setAuthToken] = useState()
+
+  const setToken = data => {
+    localStorage.setItem('token', JSON.stringify(data))
+    setAuthToken(data)
+  }
+
   return (
-    <>
-      <h1>
-        Clicks: <span data-testid="counter">{count}</span>
-      </h1>
-      <Button onClick={() => setCount(count => count + 1)}>Add</Button>
-    </>
+    <AuthContext.Provider value={{ token, setAuthenticationToken: setToken }}>
+      <BrowserRouter>
+        <Layout />
+
+        {/* -- ROUTES DEFININITIONS BELOW -- */}
+        <Route exact path="/" component={Home} />
+        <Route path="/login" component={Login} />
+        <PrivateRoute path="/admin" component={AdminBoard} />
+      </BrowserRouter>
+    </AuthContext.Provider>
   )
 }
 
