@@ -1,0 +1,47 @@
+/*------------ Global Settings: Typography ----------------*/
+.type--fade {
+    opacity: .5;
+  }
+  .type--uppercase {
+    text-transform: uppercase;
+  }
+  .type--bold {
+    font-weight: bold;
+  }
+  .type--italic {
+    font-style: italic;
+  }
+  .type--fine-print {
+    font-size: 0.85714286em;
+  }
+  .type--strikethrough {
+    text-decoration: line-through;
+    opacity: .5;
+  }
+  .type--underline {
+    text-decoration: underline;
+  }
+  .type--body-font {
+    font-family: 'Open Sans', 'Helvetica';
+  }
+  .pos-vertical-center {
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+      -webkit-transform: translateY(-50%);
+  }
+  blockquote {
+      font-size: 1.78571429em;
+      line-height: 1.5em;
+      padding: 0;
+      margin: 0;
+      border-left: 0;
+  }
+  blockquote {
+      font-family: 'Crimson Text', serif;
+      font-style: italic;
+      font-weight: 300;
+  }
+  blockquote:not(:last-child) {
+      margin-bottom: 1.04em;
+  }
