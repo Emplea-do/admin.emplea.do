@@ -11,6 +11,8 @@ function Header() {
         <NavbarBrand href="/">{process.env.REACT_APP_APPTITLE}</NavbarBrand>
         <NavItem>
           <Link to="/Login"> Login </Link>
+          <Link to="/admin"> Admin dashboard </Link>
+
           <Link to="/"> Home </Link>
         </NavItem>
       </Navbar>
