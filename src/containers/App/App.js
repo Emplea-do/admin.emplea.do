@@ -5,15 +5,24 @@ import Layout from '../../component/layout/Layout'
 
 import Login from '../../pages/Login'
 import Home from '../../pages/Home'
+import AdminBoard from '../../pages/AdminBoard'
+
+import PrivateRoute from '../../router/PrivateRoute'
+
+import { AuthContext } from '../../context/AuthenticationContext'
 
 function App() {
   return (
-    <BrowserRouter>
-      <Layout>test</Layout>
-      <Route exact path="/" component={Home} />
-      <Route path="/login" component={Login} />
-      {/* <Route path="/admin" component={Admin} /> */}
-    </BrowserRouter>
+    <AuthContext.Provider>
+      <BrowserRouter>
+        <Layout />
+
+        {/* -- ROUTES DEFININITIONS BELOW -- */}
+        <Route exact path="/" component={Home} />
+        <Route path="/login" component={Login} />
+        <PrivateRoute path="/admin" component={AdminBoard} />
+      </BrowserRouter>
+    </AuthContext.Provider>
   )
 }
 
