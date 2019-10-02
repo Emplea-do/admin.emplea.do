@@ -24,7 +24,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "test:ci": "CI=true react-scripts test --runInBand --bail --findRelatedTests",
+    "test:ci": "CI=true react-scripts test --runInBand --bail",
     "test:coverage": "react-scripts test --coverage",
     "eject": "react-scripts eject",
     "lint": "eslint src",
