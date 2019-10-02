@@ -6,19 +6,18 @@
 pr:
   - master
   - dev
-
 pool:
   vmImage: 'ubuntu-latest'
 
 steps:
-- task: NodeTool@0
-  inputs:
-    versionSpec: '10.x'
-  displayName: 'Install Node.js'
+  - task: NodeTool@0
+    inputs:
+      versionSpec: '10.x'
+    displayName: 'Install Node.js'
 
-- script: |
-    npm i -g yarn
-    yarn install
-    yarn test
-    yarn run build
-  displayName: 'npm install yarn, test and build'
+  - script: |
+      npm i -g yarn
+      yarn install
+      yarn test:ci
+      yarn run build
+    displayName: 'npm install yarn, test and build'
