@@ -1,0 +1,5 @@
+// Rem output with px fallback
+@mixin font-size($sizeValue: 1.8) {
+  font-size: ($sizeValue * 120) + px;
+  font-size: ($sizeValue / 2) + rem;
+}

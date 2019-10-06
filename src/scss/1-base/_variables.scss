@@ -1,0 +1,188 @@
+/* ---------------------- */
+/*  Font families */
+/* ---------------------- */
+
+$openSans: 'Open Sans', Helvetica, sans-serif;
+$abhayaLibre: 'Abhaya Libre', Helvetica, sans-serif;
+
+/* ---------------------- */
+/*  Color palettes */
+/* TODO: define the correct colors */
+/* ---------------------- */
+
+$black-light: #263238;
+$gray-solid: #495057;
+$gray-darker: #464646;
+$gray: #8e8e93;
+$gray-soft: #ced4da;
+$gray-light: #9e9e9e;
+$gray-lighter: #d3d3d3;
+$gray-lightest: #f4f4f4;
+$gray-off: #dfdede;
+$white: #ffffff;
+$blue-dark: #2a3a8e;
+$blue-gradient: linear-gradient(180deg, #0091df 0%, #2c3b89 100%);
+$blue-highlight: #049bdb;
+$black: #000000;
+$black-light: #222120;
+$gray-darker: #423f3d;
+$gray-dark: #575451;
+$gray: #b4b1af;
+$gray-odd: #938f8b;
+$gray-light: #ededec;
+$gray-menu: #f4f4f4;
+$gray-lighter: #f6f5f5;
+$gray-menu-active: #e9e9e9;
+
+$deep-blue: #2a3a8e;
+$blue-gradient: linear-gradient(180deg, #0091df 0%, #2c3b89 100%);
+$alert-orange: #fcb322;
+$alert-red: #d9534f;
+$hover-color-grey: rgba(244, 244, 244, 0.9);
+
+/* ------------------------------------------------------------ */
+/* Colors */
+/* ------------------------------------------------------------ */
+
+$default-text-color: $black-light;
+$primary-color: $blue-highlight;
+$secondary-color: $gray;
+$highlighted-color: $blue-highlight;
+
+/* ------------------------------------------------------------ */
+/* Font family */
+/* ------------------------------------------------------------ */
+
+$default-font-family: $openSans;
+$primary-font-family: $openSans;
+$secondary-font-family: $openSans;
+
+/* ------------------------------------------------------------ */
+/* Animations */
+/* ------------------------------------------------------------ */
+
+// Positions
+@keyframes positionRelative {
+  from {
+    position: absolute;
+  }
+  to {
+    position: relative;
+  }
+}
+@keyframes positionAbsolute {
+  from {
+    position: relative;
+  }
+  to {
+    position: absolute;
+  }
+}
+
+// Overflow
+@keyframes overflowVisible {
+  from {
+    overflow: hidden;
+  }
+  to {
+    overflow: visible;
+  }
+}
+@keyframes overflowHidden {
+  from {
+    overflow: visible;
+  }
+  to {
+    overflow: hidden;
+  }
+}
+
+/* ------------------------------------------------------------ */
+/* Bootstrap Font variables */
+/* ------------------------------------------------------------ */
+$font-family-base: $default-font-family;
+$btn-secondary-color: #d3d3d3;
+
+/* ------------------------------------------------------------ */
+/* Bootstrap Colors variables */
+/* ------------------------------------------------------------ */
+$primary: $highlighted-color;
+$secondary: $white;
+
+/* ------------------------------------------------------------ */
+/* Bootstrap spacers variables */
+/* ------------------------------------------------------------ */
+$spacer: 16px;
+$border-radius: 4px;
+$spacers: (
+  0: 0,
+  1: (
+    $spacer * 0.25,
+  ),
+  2: (
+    $spacer * 0.5,
+  ),
+  3: $spacer,
+  4: (
+    $spacer * 1.5,
+  ),
+  5: (
+    $spacer * 2,
+  ),
+  6: (
+    $spacer * 2.5,
+  ),
+  7: (
+    $spacer * 3,
+  ),
+  8: (
+    $spacer * 3.5,
+  ),
+  9: (
+    $spacer * 4,
+  ),
+  10: (
+    $spacer * 4.5,
+  ),
+  11: (
+    $spacer * 5,
+  ),
+  12: (
+    $spacer * 5.5,
+  ),
+  13: (
+    $spacer * 6,
+  ),
+  14: (
+    $spacer * 6.5,
+  ),
+  15: (
+    $spacer * 7,
+  ),
+  16: (
+    $spacer * 7.5,
+  ),
+  17: (
+    $spacer * 8,
+  ),
+  18: (
+    $spacer * 8.5,
+  ),
+);
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1680px,
+) !default;
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1440px,
+) !default;

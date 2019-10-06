@@ -1,0 +1,59 @@
+/* ------------------------------------------------------------ */
+/*  Basics  */
+/* ------------------------------------------------------------ */
+
+html,
+body {
+  min-height: 100%;
+}
+
+html {
+  font-size: 100%;
+  height: 100vh;
+}
+
+body {
+  background: $gray;
+  min-height: 100%;
+}
+
+a {
+  color: $primary;
+  display: inline-block;
+  transition: color 0.35s ease-in-out;
+  word-break: break-word;
+
+  &:hover {
+    color: darken($primary, 08);
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ------------------------------------------------------------ */
+/*  Font sizes */
+/* ------------------------------------------------------------ */
+body,
+button,
+input,
+select,
+textarea {
+  color: $default-text-color;
+  font-family: $default-font-family;
+  font-feature-settings: 'pnum';
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-style: normal;
+  font-variant-numeric: proportional-nums;
+  font-weight: normal;
+  line-height: 1.5;
+  text-rendering: optimizeLegibility;
+}
+
+#root {
+  min-height: 100vh;
+  width: 100%;
+}
