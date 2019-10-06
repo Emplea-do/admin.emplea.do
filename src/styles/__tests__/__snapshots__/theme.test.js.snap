@@ -1,9 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`theme application theme has no changes 1`] = `
-Object {
-  "colors": Object {
-    "primary": "green",
-  },
-}
-`;
