@@ -1,13 +1,15 @@
 import React from 'react'
-import { Admin, Resource, ListGuesser } from 'react-admin'
+import { Admin, Resource } from 'react-admin'
 import jsonServerProvider from 'ra-data-json-server'
 
-const dataProvider = jsonServerProvider('http://localhost:3000')
+import { JobList } from '../../components/JobsList/JobsList'
+
+const dataProvider = jsonServerProvider(process.env.REACT_APP_API_URL)
 
 function App() {
   return (
     <Admin dataProvider={dataProvider}>
-      <Resource name="jobs" list={ListGuesser} />
+      <Resource name="jobs" list={JobList} />
     </Admin>
   )
 }
