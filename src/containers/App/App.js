@@ -1,35 +1,25 @@
-import React, { useState } from 'react'
-import { BrowserRouter, Route } from 'react-router-dom'
+import React from 'react'
+import { Admin, Resource } from 'react-admin'
+import WorkIcon from '@material-ui/icons/Work'
+import jsonServerProvider from 'ra-data-json-server'
 
-import Layout from '../../component/layout/Layout'
+import authProvider from '../../providers/authProvider'
 
-import Login from '../../pages/Login'
-import Home from '../../pages/Home'
-import AdminBoard from '../../pages/AdminBoard'
+/* Resources -> pages */
+import { JobList } from '../../resources/jobs/JobList'
 
-import PrivateRoute from '../../router/PrivateRoute'
-
-import { AuthContext } from '../../context/AuthenticationContext'
+const dataProvider = jsonServerProvider(process.env.REACT_APP_API_URL)
 
 function App() {
-  const [token, setAuthToken] = useState()
-
-  const setToken = data => {
-    localStorage.setItem('token', JSON.stringify(data))
-    setAuthToken(data)
-  }
-
   return (
-    <AuthContext.Provider value={{ token, setAuthenticationToken: setToken }}>
-      <BrowserRouter>
-        <Layout />
-
-        {/* -- ROUTES DEFININITIONS BELOW -- */}
-        <Route exact path="/" component={Home} />
-        <Route path="/login" component={Login} />
-        <PrivateRoute path="/admin" component={AdminBoard} />
-      </BrowserRouter>
-    </AuthContext.Provider>
+    <Admin dataProvider={dataProvider} authProvider={authProvider}>
+      <Resource
+        icon={WorkIcon}
+        options={{ label: 'Trabajos' }}
+        name="jobs"
+        list={JobList}
+      />
+    </Admin>
   )
 }
 
