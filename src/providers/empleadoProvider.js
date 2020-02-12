@@ -39,7 +39,6 @@ const empleadoProvider = {
 
       return {
         data: map(job => ({ id: job.jobOpportunityId, ...job }), results),
-        total: results.length,
         page: currentPage,
         perPage: pageSize,
         total: rowCount,
