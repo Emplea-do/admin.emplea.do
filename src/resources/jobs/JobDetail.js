@@ -7,6 +7,12 @@ import {
   RichTextField,
 } from 'react-admin'
 
+/**
+ * TODOS
+ * - Styles
+ * - Adds more fields
+ * - API returns 500 when making a GET request to resource/{id}
+ */
 export const JobDetail = props => {
   return (
     <Show {...props}>
@@ -14,7 +20,7 @@ export const JobDetail = props => {
         <TextField source="title" />
         <TextField source="link" />
         <RichTextField source="description" />
-        <DateField label="Publication date" source="created_at" />
+        <DateField label="Fecha de publicación" source="created_at" />
       </SimpleShowLayout>
     </Show>
   )

@@ -5,13 +5,12 @@ import {
   TextField,
   BooleanField,
   DateField,
-  UrlField,
   RichTextField,
 } from 'react-admin'
 
 export const JobList = props => (
   <List {...props}>
-    <Datagrid rowClick="edit">
+    <Datagrid rowClick="show">
       <TextField label="Titulo" source="title" />
       <RichTextField label="Descripcion" source="description" />
       <TextField label="Empresa" source="companyName" />
