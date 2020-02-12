@@ -1,16 +1,23 @@
 import React from 'react'
-import { List, Datagrid, TextField, ChipField, UrlField } from 'react-admin'
+import {
+  List,
+  Datagrid,
+  TextField,
+  BooleanField,
+  DateField,
+  UrlField,
+  RichTextField,
+} from 'react-admin'
 
 export const JobList = props => (
   <List {...props}>
     <Datagrid rowClick="edit">
-      <TextField label="Titulo" source="jobTitle" />
-      <UrlField label="URL" source="JobLink" />
-      <TextField label="Empresa" source="jobCompany" />
-      <TextField label="Dirección" source="jobLocation" />
-      <TextField label="Fecha" source="jobDate" />
-      <ChipField label="Categoría" source="jobCategory" />
-      <ChipField label="Tipo" source="jobType" />
+      <TextField label="Titulo" source="title" />
+      <RichTextField label="Descripcion" source="description" />
+      <TextField label="Empresa" source="companyName" />
+      <DateField label="Fecha" source="created" />
+      <BooleanField label="¿Aprobado?" source="approved" />
+      <BooleanField label="¿Es remoto?" source="isRemote" />
     </Datagrid>
   </List>
 )
