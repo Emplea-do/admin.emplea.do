@@ -20,7 +20,7 @@ export const JobDetail = props => {
         <TextField source="title" />
         <TextField source="link" />
         <RichTextField source="description" />
-        <DateField label="Fecha de publicación" source="created_at" />
+        <DateField label="Fecha de publicación" source="created" />
       </SimpleShowLayout>
     </Show>
   )
