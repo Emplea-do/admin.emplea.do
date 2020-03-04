@@ -1,5 +1,12 @@
 import React from 'react'
-import { required, Edit, SimpleForm, TextInput, DateInput } from 'react-admin'
+import {
+  required,
+  Edit,
+  SimpleForm,
+  TextInput,
+  TextField,
+  DateField,
+} from 'react-admin'
 import RichTextInput from 'ra-input-rich-text'
 
 /**
@@ -11,11 +18,11 @@ import RichTextInput from 'ra-input-rich-text'
 export const JobDetailEdit = props => (
   <Edit {...props}>
     <SimpleForm>
-      <TextInput disabled label="Id" source="id" />
+      <TextField label="Id" source="id" />
       <TextInput source="title" validate={required()} />
       <TextInput source="link" />
       <RichTextInput source="description" validate={required()} />
-      <DateInput disabled label="Fecha de publicación" source="created" />
+      <DateField label="Fecha de publicación" source="created" />
     </SimpleForm>
   </Edit>
 )
