@@ -3,6 +3,9 @@ import ReactDOM from 'react-dom'
 
 import App from './containers/App'
 import * as serviceWorker from './serviceWorker'
+import AuthProvider from './providers/authProvider'
+
+AuthProvider.initOauth()
 
 ReactDOM.render(<App />, document.getElementById('root'))
 

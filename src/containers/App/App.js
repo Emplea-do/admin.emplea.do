@@ -9,10 +9,17 @@ import empleadoProvider from '../../providers/empleadoProvider'
 import { JobList } from '../../resources/jobs/JobList'
 import { JobDetail } from '../../resources/jobs/JobDetail'
 import { CompaniesList } from '../../resources/companies/CompaniesList'
+import SignIn from '../../components/Login/SignIn'
+import SignOut from '../../components/Login/SignOut'
 
 function App() {
   return (
-    <Admin dataProvider={empleadoProvider} authProvider={authProvider}>
+    <Admin
+      dataProvider={empleadoProvider}
+      authProvider={authProvider}
+      loginPage={SignIn}
+      logOutButton={SignOut}
+    >
       <Resource
         icon={WorkIcon}
         options={{ label: 'Oportunidades' }}
