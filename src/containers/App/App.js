@@ -8,6 +8,7 @@ import empleadoProvider from '../../providers/empleadoProvider'
 
 import { JobList } from '../../resources/jobs/JobList'
 import { JobDetail } from '../../resources/jobs/JobDetail'
+import { JobDetailEdit } from '../../resources/jobs/JobDetailEdit'
 import { CompaniesList } from '../../resources/companies/CompaniesList'
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
         name="jobs"
         list={JobList}
         show={JobDetail}
+        edit={JobDetailEdit}
       />
 
       <Resource

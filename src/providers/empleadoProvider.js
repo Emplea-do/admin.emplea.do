@@ -48,8 +48,39 @@ const empleadoProvider = {
 
   getOne: (resource, params) =>
     request(`${prepareUrl}/${resource}/${params.id}`).then(({ json }) => ({
-      data: json.result,
+      data: json,
     })),
+
+  getManyReference: (resource, params) => {
+    const { page, perPage } = params.pagination
+    const { field, order } = params.sort
+    const query = {
+      sort: JSON.stringify([field, order]),
+      range: JSON.stringify([(page - 1) * perPage, page * perPage - 1]),
+      filter: JSON.stringify({
+        ...params.filter,
+        [params.target]: params.id,
+      }),
+    }
+
+    const querifyUrl = `${prepareUrl}/${resource}?${stringify(query)}`
+    return request(querifyUrl).then(({ headers, json }) => ({
+      data: json,
+      total: parseInt(
+        headers
+          .get('content-range')
+          .split('/')
+          .pop(),
+        10
+      ),
+    }))
+  },
+
+  update: (resource, params) =>
+    request(`${prepareUrl}/${resource}/${params.id}`, {
+      method: 'PUT',
+      body: JSON.stringify(params.data),
+    }).then(({ json }) => ({ data: json })),
 }
 
 export default empleadoProvider
