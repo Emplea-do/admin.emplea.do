@@ -81,6 +81,24 @@ const empleadoProvider = {
       method: 'PUT',
       body: JSON.stringify(params.data),
     }).then(({ json }) => ({ data: json })),
+
+  delete: (resource, params) =>
+    request(`${prepareUrl}/${resource}/${params.id}`, {
+      method: 'DELETE',
+    }).then(({ json }) => ({ data: json })),
+
+  deleteMany: (resource, params) => {
+    const query = {
+      filter: JSON.stringify({
+        id: params.ids,
+      }),
+    }
+    const querifyUrl = `${prepareUrl}/${resource}?${stringify(query)}`
+    return request(querifyUrl, {
+      method: 'DELETE',
+      body: JSON.stringify(params.data),
+    }).then(({ json }) => ({ data: json }))
+  },
 }
 
 export default empleadoProvider
