@@ -86,6 +86,7 @@ const empleadoProvider = {
     request(`${prepareUrl}/${resource}/${params.id}`, {
       method: 'DELETE',
     }).then(({ json }) => ({ data: json })),
+
   deleteMany: (resource, params) => {
     const query = {
       filter: JSON.stringify({
