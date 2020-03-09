@@ -8065,6 +8065,11 @@ jsx-ast-utils@^2.1.0, jsx-ast-utils@^2.2.1:
     array-includes "^3.0.3"
     object.assign "^4.1.0"
 
+jwt-decode@^2.2.0:
+  version "2.2.0"
+  resolved "https://registry.npm.taobao.org/jwt-decode/download/jwt-decode-2.2.0.tgz#7d86bd56679f58ce6a84704a657dd392bba81a79"
+  integrity sha1-fYa9VmefWM5qhHBKZX3TkruoGnk=
+
 killable@^1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/killable/-/killable-1.0.1.tgz#4c8ce441187a061c7474fb87ca08e2a638194892"
@@ -11139,6 +11144,14 @@ react-focus-lock@^1.18.3:
     focus-lock "^0.6.3"
     prop-types "^15.6.2"
     react-clientside-effect "^1.2.0"
+
+react-google-login@^5.1.1:
+  version "5.1.1"
+  resolved "https://registry.npm.taobao.org/react-google-login/download/react-google-login-5.1.1.tgz#9d479ccc0aca8ca4c81f4180b02af861869264fe"
+  integrity sha1-nUeczArKjKTIH0GAsCr4YYaSZP4=
+  dependencies:
+    "@types/react" "*"
+    prop-types "^15.6.0"
 
 react-helmet-async@^1.0.2:
   version "1.0.3"
